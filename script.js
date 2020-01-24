@@ -26,7 +26,7 @@ async function giftWrapping() {
   let checkLine1 = null;
   let checkLine2 = null;
   let done = false;
-  setInterval(() => draw(), drawInterval);
+  const interval = setInterval(() => draw(), drawInterval);
 
   const numPoints = 10;
   const points = [];
@@ -94,6 +94,7 @@ async function giftWrapping() {
   checkLine1 = null;
   checkLine2 = null;
   done = true;
+  clearInterval(interval);
   draw();
   console.log('pointsOnHull', pointsOnHull, pointsOnHull.length, 'done');
 
