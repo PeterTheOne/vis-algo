@@ -26,7 +26,7 @@ async function giftWrapping() {
   let checkLine1 = null;
   let checkLine2 = null;
   let done = false;
-  window.requestAnimationFrame(loop);
+  setInterval(() => draw(), drawInterval);
 
   const numPoints = 10;
   const points = [];
@@ -96,20 +96,6 @@ async function giftWrapping() {
   done = true;
   draw();
   console.log('pointsOnHull', pointsOnHull, pointsOnHull.length, 'done');
-
-
-
-  function loop(timestamp) {
-    if (!start) start = timestamp;
-    const progress = timestamp - start;
-    if (!done) {
-      window.requestAnimationFrame(loop);
-    }
-    if (progress > drawInterval) {
-      start = timestamp;
-      draw();
-    }
-  }
 
   function drawLine(a, b, lineWidth, color) {
     ctx.lineWidth = lineWidth;
