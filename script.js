@@ -94,6 +94,7 @@ async function giftWrapping() {
   checkLine1 = null;
   checkLine2 = null;
   done = true;
+  draw();
   console.log('pointsOnHull', pointsOnHull, pointsOnHull.length, 'done');
 
 
