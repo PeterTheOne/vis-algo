@@ -1,0 +1,11 @@
+html {
+  font-family: sans-serif;
+}
+
+#algoCanvas {
+  display: block;
+  width: 30rem;
+  max-width: 100%;
+  margin: 0 auto;
+  background: lightgrey;
+}
