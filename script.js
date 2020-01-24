@@ -1,7 +1,7 @@
 
 const algoCanvas = document.getElementById('algoCanvas');
 const ctx = algoCanvas.getContext('2d');
-const ctxDim = {width: 10000, height: 10000};
+const ctxDim = {width: 500, height: 500};
 const ctxPad = 0.1;
 
 Array.prototype.asyncForEach = async function (callback) {
@@ -114,12 +114,12 @@ async function giftWrapping() {
     ctx.rect(0, 0, ctxDim.width, ctxDim.height);
     ctx.fill();
 
-    const pointRadius = 100;
+    const pointRadius = 5;
     const pointColor = 'black';
     const selectColor1 = 'blue';
     const selectColor2 = 'grey';
     const edgeColor = 'black';
-    const lineWidth = 40;
+    const lineWidth = 2;
 
     points.forEach((point) => {
       ctx.fillStyle = pointColor;
